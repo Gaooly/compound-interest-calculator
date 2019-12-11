@@ -1,23 +1,18 @@
 # compound-interest
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run s
 ```
 
-### Lints and fixes files
+### 打包
 ```
-npm run lint
+npm run b
 ```
 
 ### Customize configuration
