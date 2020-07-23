@@ -14,6 +14,3 @@ npm run s
 ```
 npm run b
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
