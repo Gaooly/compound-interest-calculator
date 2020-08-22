@@ -4,21 +4,22 @@
     <el-row :gutter="20" type="flex" class="row-bg" justify="center">
       <el-col :span="4">
         <el-input placeholder="本金" v-model="input1">
-          <template slot="append">本金</template>
+          <template slot="prepend">初始资金</template>
         </el-input>
       </el-col>
       <el-col :span="4">
         <el-input placeholder="复投" v-model="input2">
-          <template slot="append">复投</template>
+          <template slot="prepend">复投金额</template>
         </el-input>
       </el-col>
       <el-col :span="4">
         <el-input placeholder="利率" v-model="input3">
+          <template slot="prepend">利率</template>
           <template slot="append">%</template>
         </el-input>
       </el-col>
       <el-col :span="4">
-        <el-input placeholder="" v-model="input4">
+        <el-input placeholder v-model="input4">
           <template slot="append">复利次数</template>
         </el-input>
       </el-col>
@@ -42,15 +43,15 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
-      input1: 0,
+      input1: 200,
       input2: 0,
       input3: 10,
       input4: 12,
-      tableData: []
+      tableData: [],
     };
   },
   methods: {
@@ -61,11 +62,11 @@ export default {
       // r 年利率
       // n 存了多少年
       // A 复投
-      var originally = parseFloat(this.input1)+0;
-      var A = parseFloat(this.input2)+0;
+      var originally = parseFloat(this.input1) + 0;
+      var A = parseFloat(this.input2) + 0;
       var r = parseFloat(this.input3) / 100 + 1;
       var all = originally;
-      var n = parseFloat(this.input4)+0;
+      var n = parseFloat(this.input4) + 0;
       for (var i = 0; i < n; i++) {
         var time = i + 1 + "次";
         all = parseFloat(all * r + A).toFixed(2);
@@ -75,12 +76,12 @@ export default {
           time,
           all,
           originally,
-          profit
+          profit,
         });
       }
       this.tableData = tableData;
-    }
-  }
+    },
+  },
 };
 </script>
 

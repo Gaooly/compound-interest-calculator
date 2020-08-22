@@ -1,16 +1,3 @@
-# compound-interest
+# 一个用于计算复利的计算器
 
-## 安装依赖
-```
-npm install
-```
-
-### 运行
-```
-npm run s
-```
-
-### 打包
-```
-npm run b
-```
+预览 ===
